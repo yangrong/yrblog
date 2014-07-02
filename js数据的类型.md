@@ -61,3 +61,12 @@ new String('foo') instanceof Object; // true
 ```js
 +'10' === 10; // true
 ```
+
+转换为布尔型
+
+通过使用 否 操作符两次，可以把一个值转换为布尔型。
+```js
+!!'foo';   // true
+!!'';      // false
+!!'0';     // true
+```
