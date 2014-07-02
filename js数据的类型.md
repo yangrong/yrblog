@@ -21,3 +21,43 @@ console.log(Object.prototype.toString.call(function(){})) //[object Function]
 Object.prototype.toString.call(function(){}) == '[object Function]'  //true
 
 ```
+
+
+而instanceof 操作符用来比较两个操作数的构造函数。只有在比较自定义的对象时才有意义。 如果用来比较内置类型，将会和 typeof 操作符 一样用处不大。
+
+```js
+function Foo() {}
+function Bar() {}
+Bar.prototype = new Foo();
+
+new Bar() instanceof Bar; // true
+new Bar() instanceof Foo; // true
+
+// 如果仅仅设置 Bar.prototype 为函数 Foo 本身，而不是 Foo 构造函数的一个实例
+Bar.prototype = Foo;
+new Bar() instanceof Foo; // false
+
+```
+
+```js
+new String('foo') instanceof String; // true
+new String('foo') instanceof Object; // true
+
+'foo' instanceof String; // false
+'foo' instanceof Object; // false
+
+```
+
+
+数据类型转化
+
+转换为字符串
+```js
+'' + 10 === '10'; // true
+```
+将一个值加上空字符串可以轻松转换为字符串类型。
+
+转换为数字
+```js
++'10' === 10; // true
+```
