@@ -16,3 +16,5 @@ function Foo() {
 }
 new Foo();
 ```
+
+这里输出 undefined,是因为this.method执行函数里面的this,指向的不是Foo的实例对象，而是windows对象，所以这里的this.value,是undedined；
