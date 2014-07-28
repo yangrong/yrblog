@@ -36,6 +36,12 @@ var lasttime = new Date(Date.parse(localStorage.lasttime));
 localStorage.data = JSON.stringigy(data);
 //解码Json格式
 var data = JSON.parse(localStorage.data);
+
+//cookie的编码，解码用的是
+//编码
+encodeURIComponent(new Date());
+//解码
+decodeURIComponent(encodeURIComponent(new Date())
 ```
 
 ###### localStorage的兼容
