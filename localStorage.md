@@ -22,6 +22,21 @@ function showStorage(){
  }
 }
 ```
+###### localStorage获取的变量格式
+```js
+storage.setItem("pageLoadCount",0);
+//无论是cookie还是 localStorage获取的值都是string类型，所以取到值，我们一般要走数据转换
+(storage.getItem("pageLoadCount")) + 1；
+
+
+localStorage.lasttime = new Date().toUTCString();
+//解码日期
+var lasttime = new Date(Date.parse(localStorage.lasttime));
+
+localStorage.data = JSON.stringigy(data);
+//解码Json格式
+var data = JSON.parse(localStorage.data);
+```
 
 ###### localStorage的兼容
 ```js
