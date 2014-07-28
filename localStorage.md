@@ -1,11 +1,27 @@
 localStorage是浏览器用于存储本地数据的一个对象.浏览器支持还是不错的,至少ie8系已经开始支持.其他现代浏览器的支持更不在话下
 ```js
+//这里的就是一段简单的localStorage的实现方式，每次刷新页面，显示的数字都会在原来的基础上+1
 var storage = window.localStorage;
 if (!storage.getItem("pageLoadCount")) storage.setItem("pageLoadCount",0);
 storage.pageLoadCount = parseInt(storage.getItem("pageLoadCount")) + 1;//必须格式转换
 document.getElementById("count").innerHTML = storage.pageLoadCount;
 ```
-这里的就是一段简单的localStorage的实现方式，每次刷新页面，显示的数字都会在原来的基础上+1
+```js
+//清除所有的localStorage
+localStorage.clear()
+```
+
+```js
+//遍历localStorage存储的key
+var storage = window.localStorage;
+function showStorage(){
+ //循环显示localStorage里的键值对
+ for(var i=0;i<storage.length;i++){
+  //key(i)获得相应的键，再用getItem()方法获得对应的值
+  document.write(storage.key(i)+ " : " + storage.getItem(storage.key(i)) + "<br>");
+ }
+}
+```
 
 ###### localStorage的兼容
 ```js
