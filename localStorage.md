@@ -22,7 +22,7 @@ function showStorage(){
  }
 }
 ```
-###### localStorage获取的变量格式
+###### localStorage获取到的变量的格式
 ```js
 storage.setItem("pageLoadCount",0);
 //无论是cookie还是 localStorage获取的值都是string类型，所以取到值，我们一般要走数据转换
