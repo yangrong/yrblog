@@ -7,7 +7,7 @@ document.getElementById("count").innerHTML = storage.pageLoadCount;
 ```
 这里的就是一段简单的localStorage的实现方式，每次刷新页面，显示的数字都会在原来的基础上+1
 
-localStorage的兼容
+###### localStorage的兼容
 ```js
 //记录数据
 var arrDisplay = [0, 1, 1, 1];
@@ -24,7 +24,7 @@ var strStoreDate = window.localStorage? localStorage.getItem("menuTitle"): Cooki
 
 ```
 
-####### 其他本地存储的tip:
+###### 其他本地存储的tip:
 1.sessionStorage是一个跟浏览器生命周期相同的本地存储,在页面刷新后保持之前输入的数据的场景下特别有效.
 2.可以用localStorage.clear()方法彻底清除localStorage.
 3.localStorage对于每个域都有5兆的存储空间,而且对于存储数据条数也有不同的限制.
