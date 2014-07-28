@@ -9,6 +9,7 @@ document.getElementById("count").innerHTML = storage.pageLoadCount;
 
 localStorage的兼容
 ```js
+//记录数据
 var arrDisplay = [0, 1, 1, 1];
 
 //存储，IE6~7 cookie 其他浏览器HTML5本地存储
@@ -17,6 +18,10 @@ if (window.localStorage) {
 } else {
     Cookie.write("menuTitle", arrDisplay);	
 }
+
+//读取数据
+var strStoreDate = window.localStorage? localStorage.getItem("menuTitle"): Cookie.read("menuTitle");	
+
 ```
 
 ####### 其他本地存储的tip:
