@@ -61,6 +61,8 @@ new String('foo') instanceof Object; // true
 ```js
 +'10' === 10; // true
 ```
+当需要将数字转换成字符时，采用如下方式："" + 1。从性能上来看，将数字转换成字符时，有如下公式：("" +) > String() > .toString() > new String()。String()属于内部函数，所以速度很快。而.toString()要查询原型中的函数，所以速度逊色一些，new String()需要重新创建一个字符串对象，速度最慢。
+
 
 转换为布尔型
 
