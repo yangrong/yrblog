@@ -74,3 +74,27 @@ E {box-shadow:inset x-offset y-offset blur-radius spread-radius color}
 x-offset y-offset 设置为0的时候，阴影围绕物象形成。
 阴影模糊半径：阴影的虚化程度，值越大，越模糊。如果设置为0，则会产生实体，没有羽化效果的边缘效果。
 阴影扩展半径：阴影产生的范围，值越大，阴影范围越大。
+
+
+
+径向渐变：
+```css
+.radial{
+    display:block; 
+    width:150px; 
+    height:150px; 
+    border:1px solid blue; }
+.radial{
+
+    background-image:-webkit-gradient(radial, 45 45, 10, 52 50, 30, from(#A7D30C), to(rgba(1,159,98,0)), color-stop(90%, #019F62));
+}
+```
+-webkit-gradient(radial, inner_center, inner_radius, outer_center, outer_radius, / stop...)
+对应的值：
+inner_center	内部中心点，径向渐变起始圆环
+inner_radius	内部半径，径向渐变起始圆
+outer_center	外部渐变结束圆的中心点
+outer_radius	外部渐变结束圆的半径
+
+
+
