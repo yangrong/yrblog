@@ -8,6 +8,9 @@
 ```
 然后用css3动画，控制 stroke-dashoffset原来的2000（路径开始的位置）到0（路径结束的位置），
 这里的stroke-dashoffset设置为2000只为了让这足够大（svg图形的路径长度长就好）路径精确长度可通过js来获取
+
+stroke-dasharray：表示虚线描边。可选值为：none, <dasharray>, inherit. 其中，none表示不是虚线；<dasharray>为一个逗号或空格分隔的数值列表。表示各个虚线端的长度。可以是固定的长度值，也可以是百分比值；inherit表继承。
+当stroke-dasharray为null的时候，显示的是实线,值越大，每段虚线（实线）越长，当stroke-dasharray足够大，（大到比路径长），这样子就可以，把stroke-dashoffse设置足够大，随着stroke-dashoffse的值慢慢向零靠经的时候，（这个场景路径会显示从头到尾渐渐出现的过程，也是就是我们写字的动画）
 ```js
 document.getElementById('svg_7').getTotalLength();//1255.40771484375
 ```
