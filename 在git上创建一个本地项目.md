@@ -26,7 +26,7 @@ git clone https://github.com/yangrong/fortext.git
 
 我们可以在d盘上面找到如下图标就是我们拉下来的仓库文件
 
-![alt text](http://p2.qhimg.com/t01cf0e7ed3d52e013f.png）
+![alt text](http://p2.qhimg.com/t01cf0e7ed3d52e013f.png)
 
 如果我们本地代码文件，往本地仓库文件上扔，然后要上传到github上面，需要执行如下步骤：
 
