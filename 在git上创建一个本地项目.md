@@ -17,7 +17,7 @@ cd (你要把代码仓库放在哪个路径下面，比如 d: ,就是放在d盘�
 
 然后执行clone命令，把github的仓库clone到本地
 
-git clone https://github.com/yangrong/fortext.git
+·git clone https://github.com/yangrong/fortext.git·
 
 这里的url是在我们创建仓库的时候生成的那个链接。
 
@@ -33,7 +33,7 @@ git clone https://github.com/yangrong/fortext.git
 在fortext的文件上（就是拉下来的仓库文件）右键，选择git bash
 
 执行命令
-
+·
 git pull 
 
 git add （需要添加的文件）
@@ -41,7 +41,7 @@ git add （需要添加的文件）
 git commit -m ''
 
 git push
-
+·
 
 
 
