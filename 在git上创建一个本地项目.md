@@ -17,7 +17,7 @@ cd (你要把代码仓库放在哪个路径下面，比如 d: ,就是放在d盘�
 
 然后执行clone命令，把github的仓库clone到本地
 
-<pre><code>git clone https://github.com/yangrong/fortext.git·</pre></code>
+<pre><code>git clone https://github.com/yangrong/fortext.git·</code></pre>
 
 这里的url是在我们创建仓库的时候生成的那个链接。
 
@@ -38,5 +38,16 @@ git pull
 git add （需要添加的文件）
 git commit -m ''
 git push
-</pre></code>
+</code></pre>
+
+其他git命令：
+
+<pre><code>Git status</code></pre>
+
+查看当前文件状态 如果有文件有改动会显示如图
+
+![alt text](http://p5.qhimg.com/t0105fa3589f66a8bcd.png)
+显示 localStorage.html 有修改的地方。
+
+
 
