@@ -40,6 +40,8 @@ git commit -m ''
 git push
 </code></pre>
 
+这个命令适用于新增的文件，也适用于修改过的文件。
+
 其他git命令：
 
 <pre><code>Git status</code></pre>
@@ -50,7 +52,7 @@ git push
 
 显示 localStorage.html 有修改的地方。
 
-如果上面改过的这个文件，在线上代码仓库修改，那么照常执行
+如果上面改过的这个文件，在线上代码仓库也同时做了修改，那么照常执行
 
 <pre><code>
 git add （需要添加的文件）
