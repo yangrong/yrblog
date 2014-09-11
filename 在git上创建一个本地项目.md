@@ -76,3 +76,26 @@ git push
 </code></pre>
 这样就可以把解决完冲突的文件push到线上去了。
 
+
+
+#### 好了，知道一些svn的基本的操作之后，我们再复习一下
+在指定的文件夹下，把我们的代码仓库拉下来。（右键选择svn Checkout）
+![alt text](http://p5.qhimg.com/t0105fa3589f66a8bcd.png)
+
+我们在本地仓库里面新建了一个文件如图：
+![alt text](http://p6.qhimg.com/t01a9d9fd737270b53b.png）
+
+###### 上传新增的文件
+右键，选择 tortoriseSvn -> add 把文件添加上去
+再一次右键 选择 SVN Commit 
+
+###### 上传修改的文件
+修改之后的文件，图标会从从一个绿对勾变成红色的感叹号。
+点文件，右键svn commit 就可以了。
+
+###### 删除文件
+我们把一个文件的delete掉之后，到该文件的父层去svn commit，会出现下图的面板
+![alt text](http://p4.qhimg.com/t01a2c105cf8269d48f.png）
+记得勾选删除的文件，这样就在线上也把文件给删除了
+
+
