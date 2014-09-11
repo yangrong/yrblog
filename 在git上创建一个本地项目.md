@@ -47,7 +47,30 @@ git push
 查看当前文件状态 如果有文件有改动会显示如图
 
 ![alt text](http://p5.qhimg.com/t0105fa3589f66a8bcd.png)
+
 显示 localStorage.html 有修改的地方。
 
+如果上面改过的这个文件，在线上代码仓库修改，那么照常执行
 
+<pre><code>
+git add （需要添加的文件）
+git commit -m ''
+git pull 
+git push
+</code></pre>
+这样是push不上去的，因为线上线下有冲突，在执行git pull 的时候，会有如下的提示
+![alt text](http://p6.qhimg.com/t0121d600ff52c01880.png)
+
+这里我打开本地代码文件，在冲突的代码，解决冲突，如图，解决下面的冲突
+![alt text](http://p6.qhimg.com/t0195f271687b18494f.jpg)
+
+然后直接
+再执行
+<pre><code>
+git pull 
+git add （需要添加的文件）
+git commit -m ''
+git push
+</code></pre>
+这样就可以把解决完冲突的文件push到线上去了。
 
