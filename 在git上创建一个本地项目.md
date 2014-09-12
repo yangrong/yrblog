@@ -95,7 +95,6 @@ git push
 
 #### 好了，知道一些svn的基本的操作之后，我们再复习一下
 在指定的文件夹下，把我们的代码仓库拉下来。（右键选择svn Checkout）
-![alt text](http://p5.qhimg.com/t0105fa3589f66a8bcd.png)
 
 我们在本地仓库里面新建了一个文件如图：
 
