@@ -1,0 +1,17 @@
+appendChild&innerHTML
+-----------------
+
+appendChild和innerHTML是两个常用的给节点添加内容的方法。
+
+###### appendChild
+appendChild() 方法在指定元素节点的最后一个子节点之后添加节点。
+
+##### innerHTML
+innerHTML 属性设置或返回表格行的开始和结束标签之间的 HTML内容
+dom.innerHTML  -> 这个获取html内容（获取的是一个字符串）
+dom.innerHTML = '<a>链接</a>' -> 这样是给dom上面的添加html内容，以字符串的方式。
+
+appendChild区别于innerHTML在于前者要求插入的元素应该是dom元素，且只是将插入的元素，放在父节点的最后一个节点上
+而后者是字符串，字符串将覆父层元素已有的所有内容。
+
+
