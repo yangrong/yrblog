@@ -24,6 +24,7 @@ cd (你要把代码仓库放在哪个路径下面，比如 d: ,就是放在d盘�
 这样我们就把本地的指定文件夹跟github关联上了。
 
 
+###### 添加新文件/修改原有的文件，并上传：
 我们可以在d盘上面找到如下图标就是我们拉下来的仓库文件
 
 ![alt text](http://p2.qhimg.com/t01cf0e7ed3d52e013f.png)
@@ -42,7 +43,7 @@ git push
 
 这个命令适用于新增的文件，也适用于修改过的文件。
 
-其他git命令：
+###### 查看状态
 
 <pre><code>Git status</code></pre>
 
@@ -52,6 +53,7 @@ git push
 
 显示 localStorage.html 有修改的地方。
 
+###### 解决线上线下冲突
 如果上面改过的这个文件，在线上代码仓库也同时做了修改，那么照常执行
 
 <pre><code>
@@ -66,7 +68,6 @@ git push
 这里我打开本地代码文件，在冲突的代码，解决冲突，如图，解决下面的冲突，这里解决的冲突的方式跟svn有一点区别，svn需要在文件中把冲突的片段解决之后，在执行svn resolve +（起冲突文件路径），我们在git直接解决就好了。
 ![alt text](http://p6.qhimg.com/t0195f271687b18494f.jpg)
 
-然后直接
 再执行
 <pre><code>
 git pull 
@@ -75,6 +76,20 @@ git commit -m ''
 git push
 </code></pre>
 这样就可以把解决完冲突的文件push到线上去了。
+
+###### 删除文件，并同步到线上：
+如果我们把一个文件删除，我们执行
+<pre><code>Git status</code></pre>
+会显示如图
+![alt text](http://p2.qhimg.com/t01ddf7ee87fecb4d89.png)
+这里标明，jsimgcss文件下的若干文件被删除了,执行下命令把本地删除的文件同步到线上去。
+
+<pre><code>
+git add -A
+git commit -m 'delect'
+git pull
+git push
+</code></pre>
 
 
 
