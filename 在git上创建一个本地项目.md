@@ -37,7 +37,7 @@ cd (你要把代码仓库放在哪个路径下面，比如 d: ,就是放在d盘�
 <pre><code>
 git pull 
 git add （需要添加的文件）
-git commit -m ''
+git commit -m '一定要记得写注释哦'
 git push
 </code></pre>
 
@@ -58,7 +58,7 @@ git push
 
 <pre><code>
 git add （需要添加的文件）
-git commit -m ''
+git commit -m '一定要记得写注释哦'
 git pull 
 git push
 </code></pre>
@@ -72,7 +72,7 @@ git push
 <pre><code>
 git pull 
 git add （需要添加的文件）
-git commit -m ''
+git commit -m '一定要记得写注释哦'
 git push
 </code></pre>
 这样就可以把解决完冲突的文件push到线上去了。
