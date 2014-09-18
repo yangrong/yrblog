@@ -25,14 +25,6 @@ JavaScript闭包的一个运用场景
 ```js
 	var menuLi = document.getElementById('menu').getElementsByTagName('li');
 	var menuContent = document.getElementById('content').getElementsByTagName('li');
-	function siblings(elem) {
-		var a = [];
-		var b = elem.parentNode.children;
-		for (var i = 0; i < b.length; i++) {
-			if (b[i] !== elem) a.push(b[i]);
-		}
-		return a;
-	}
 
  for (var i = 0; i < menuLi.length; i++) {
 		
@@ -56,7 +48,7 @@ JavaScript闭包的一个运用场景
 		})(num);
 	}
 ```
-这里我们用闭包把函数封装起来，，因为函数的参数是以值得方式传递的（对象传递的是内存中引用，也是一个值），所以增加一个自动执行函数，把参数 i 传进去（因为是以值传递）所以也就是把每次循环的 i 都复制了一次（内存中开辟了新地址），这样每个循环体都有一个独立的 i ，所以对自执行函数（闭包）里面的 i 的引用都是独立的。
+这里我们用闭包把函数封装起来，因为函数的参数是以值得方式传递的（对象传递的是内存中引用，也是一个值），所以增加一个自动执行函数，把参数 i 传进去（因为是以值传递）所以也就是把每次循环的 i 都复制了一次（内存中开辟了新地址），这样每个循环体都有一个独立的 i ，所以对自执行函数（闭包）里面的 i 的引用都是独立的。
 我们执行这段代码的时候，会发现，这个页面加载完之后，所以的结果，都会log出来，点击事件触发的时候，没有执行，这个是因为，
 ```
 (function(e){
