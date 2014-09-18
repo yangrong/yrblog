@@ -26,4 +26,5 @@ var link ='<a herf='#'>a link</a>'
 var father=$('#father');
 father[0].appendChild($(link)[0]);
 ```
-
+JQuery 提供的一个函数
+append(content)方法的功能是向指定的元素中追加内容，被追加的content参数，可以是字符、HTML元素标记，还可以是一个返回字符串内容的函数。
