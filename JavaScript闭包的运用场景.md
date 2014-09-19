@@ -72,3 +72,37 @@ JavaScript闭包的一个运用场景
 ```
 
 这个函数执行，只是return一个函数是吧，return的函数体，会在onclick时间的时候触发。
+
+下面我们来看一下，一个最常见的闭包的运用场景
+```js
+
+var testbibao ='';
+	(function(){
+    var name = '我在闭包里面，闭包外面的函数没有办法取到我的值';
+    var age = '34';
+    var status = 'single';
+    function createMember(){
+        console.log('闭包')
+    }
+    function getMemberDetails(){
+        // [...]
+        console.log(testbibao);
+    }
+    createMember();
+    getMemberDetails();//输出：闭包可以访问外面的变量，函数
+})();
+
+
+function test(){
+	console.log(name);
+}
+/*这里为了测试，建议不要用相同命名，
+这里：闭包里面有一个同名函数，但是互相不影响的*/
+function getMemberDetails(){
+	console.log('闭包里面有一个同名函数，但是互相不影响的，素不素啊！')
+}
+
+test();//这里输出空值，因为闭包里面的变量外面访问不到
+getMemberDetails();
+
+```
