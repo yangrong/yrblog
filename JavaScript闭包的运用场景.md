@@ -76,7 +76,7 @@ JavaScript闭包的一个运用场景
 下面我们来看一下，一个最常见的闭包的运用场景
 ```js
 
-var testbibao ='';
+var testbibao ='闭包可以访问外面的变量，函数';
 	(function(){
     var name = '我在闭包里面，闭包外面的函数没有办法取到我的值';
     var age = '34';
