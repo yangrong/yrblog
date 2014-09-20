@@ -37,7 +37,7 @@ $.each()与$(selector).each()不同, 后者专用于jquery对象的遍历, 前�
 <script>
 
 $.each([52, 97], function(index, value) {
-alert(index + ‘: ‘ + value);
+alert(index + ': ' + value);
 });
 
 </script>
@@ -63,11 +63,11 @@ alert(index + ‘: ‘ + value);
 <script>
 
 var map = {
-‘flammable’: ‘inflammable’,
-‘duh’: ‘no duh’
+'flammable': 'inflammable',
+'duh’: 'no duh’
 };
 $.each(map, function(key, value) {
-alert(key + ‘: ‘ + value);
+alert(key + ': ' + value);
 });
 
 </script>
@@ -103,21 +103,21 @@ duh: no duh
 
   </style>
 
-  <script src=”http://code.jquery.com/jquery-latest.js”></script>
+  <script src='http://code.jquery.com/jquery-latest.js'></script>
 
 </head>
 
 <body>
 
-  <div id=”one”></div>
+  <div id='one'></div>
 
-  <div id=”two”></div>
+  <div id='two'></div>
 
-  <div id=”three”></div>
+  <div id='three'></div>
 
-  <div id=”four”></div>
+  <div id='four'></div>
 
-  <div id=”five”></div>
+  <div id='five'></div>
 
 <script>
 
@@ -127,9 +127,9 @@ duh: no duh
 
     jQuery.each(arr, function() {  // this 指定值
 
-      $(“#” + this).text(“Mine is ” + this + “.”);  // this指向为数组的值, 如one, two
+      $('#' + this).text('Mine is ' + this + '.');  // this指向为数组的值, 如one, two
 
-       return (this != “three”); 
+       return (this != 'three'); 
       
        // 如果this = three 则退出遍历 因为第一次执行，第二次执行，都返回true 循环继续，第三次，返回false退出each操作。
 
@@ -137,7 +137,7 @@ duh: no duh
 
     jQuery.each(obj, function(i, val) {  // i 指向键, val指定值
 
-      $(“#” + i).append(document.createTextNode(” – ” + val));
+      $('#' + i).append(document.createTextNode(” – ” + val));
 
     });
 
@@ -166,12 +166,12 @@ Mine is three. – 3
 <!DOCTYPE html>
 <html>
 <head>
-<script src=”http://code.jquery.com/jquery-latest.js”></script>
+<script src='http://code.jquery.com/jquery-latest.js'></script>
 </head>
 <body>
 <script>
 $.each( ['a','b','c'], function(i, l){
-alert( “Index #” + i + “: ” + l );
+alert( 'Index #' + i + ': ' + l );
 });
 
 </script>
@@ -192,13 +192,13 @@ alert( “Index #” + i + “: ” + l );
 <!DOCTYPE html>
 <html>
 <head>
-<script src=”http://code.jquery.com/jquery-latest.js”></script>
+<script src='http://code.jquery.com/jquery-latest.js'></script>
 </head>
 <body>
 <script>
 
 $.each( { name: “John”, lang: “JS” }, function(k, v){
-alert( “Key: ” + k + “, Value: ” + v );
+alert( 'Key: ' + k + ' Value: ' + v );
 });
 
 </script>
@@ -221,7 +221,7 @@ alert( “Key: ” + k + “, Value: ” + v );
 <!DOCTYPE html>
 <html>
 <head>
-<script src=”http://code.jquery.com/jquery-latest.js”></script>
+<script src='http://code.jquery.com/jquery-latest.js'></script>
 </head>
 <body>
 <script>
@@ -232,7 +232,7 @@ if (index == 0) {
 return true; // equivalent to ‘continue’ with a normal for loop
 }
 // else do stuff…
-alert (index + “: “+ value);
+alert (index + ': '+ value);
 });
 
 </script>
