@@ -32,6 +32,6 @@ get和post的区别
 
 * 如图 控制台上打出来的 psot 方法
 
-![](http://p1.qhimg.com/t0127064ba70b48a2b6.jpg)
+![](http://p2.qhimg.com/t016485ab8ebfd286b4.png)
 
 
