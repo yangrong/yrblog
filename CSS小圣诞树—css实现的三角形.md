@@ -71,6 +71,7 @@ css写一个正三角形
 ```html
  <div id="boder_arrow"> </div>
 ```
+
 ```css
  #boder_arrow{border-width:20px;border-color:#ff6699 #ff3366 #cc0066 #990033;border-style:solid;width:0;height:0;line-height:0; }
 
@@ -78,3 +79,30 @@ css写一个正三角形
 
  #boder_arrow{border-width:20px;border-color:transparent transparent #cc0066 transparent;border-style:solid;width:0;height:0;line-height:0; }
 ```
+
+这也也可以用unicode几何图像
+
+```html
+<span class="form_hint">正确格式为：6~18个字符，可使用字母、数字、下划线，需以字母开头</span>
+```
+```css
+.form_hint {
+	display:block;
+	background: #d45252;
+	border-radius: 3px 3px 3px 3px;
+	color: white;
+	margin-left:8px;
+	padding: 1px 6px;
+	z-index: 999; 
+	position: absolute; 
+
+}
+.form_hint::before {
+	content: "\25C0";/*三角形图标*/
+	color:#d45252;
+	position: absolute;
+	top:1px;
+	left:-6px;
+}
+```
+![](http://p1.qhimg.com/t01c1c4c54184411b64.png）
