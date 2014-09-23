@@ -105,4 +105,4 @@ css写一个正三角形
 	left:-6px;
 }
 ```
-![](http://p1.qhimg.com/t01c1c4c54184411b64.png）
+![替代文本](http://p1.qhimg.com/t01c1c4c54184411b64.png)
