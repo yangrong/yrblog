@@ -22,9 +22,11 @@ get和post的区别
 
 ## get
 
-* get方法是允许跨域的,因为url访问是无限制的,jsonp其实就是get封装的一个方法
+* get方法是允许跨域的,因为url访问是无限制的,JSONP跨域GET请求是一个常用的解决方案，但是这里的get的跨域方式其实与ajax XmlHttpRequest协议无关了
 
-* get参数可见，而post不可见，get不安全
+* get参数可见，而post不可见
+
+* get不安全
 
 * get一般主要是用来获取数据，post是提交，这是字面意思
 
