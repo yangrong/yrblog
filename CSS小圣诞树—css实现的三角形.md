@@ -80,7 +80,7 @@ css写一个正三角形
  #boder_arrow{border-width:20px;border-color:transparent transparent #cc0066 transparent;border-style:solid;width:0;height:0;line-height:0; }
 ```
 
-这也也可以用unicode几何图像
+css写一个正三角形,也可以用unicode几何图像
 
 ```html
 <span class="form_hint">正确格式为：6~18个字符，可使用字母、数字、下划线，需以字母开头</span>
