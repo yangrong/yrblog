@@ -75,6 +75,27 @@ x-offset y-offset 设置为0的时候，阴影围绕物象形成。<br/>
 阴影模糊半径：阴影的虚化程度，值越大，越模糊。如果设置为0，则会产生实体，没有羽化效果的边缘效果。<br/>
 阴影扩展半径：阴影产生的范围，值越大，阴影范围越大。<br/>
 
+还可以支持绘制多个阴影（虽然这示例略搓）：
+
+```html
+<div class="boxshadow">
+</div>
+```
+.boxshadow{
+    width:100px;
+	height:100px;
+    box-shadow:4px 2px 6px #f00, -4px -2px 6px #000, 0px 0px 12px 5px #33CC00 inset
+   }
+```css
+.boxshadow{
+    width:100px;
+	height:100px;
+    box-shadow:4px 2px 6px #f00, /*第一个阴影*/
+    -4px -2px 6px #000,/*第二个阴影*/
+    0px 0px 12px 5px #33CC00 inset/*第三个阴影*/
+   }
+```
+
 
 
 径向渐变：
