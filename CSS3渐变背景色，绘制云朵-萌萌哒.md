@@ -104,6 +104,7 @@ x-offset y-offset 设置为0的时候，阴影围绕物象形成。<br/>
     font: bold 55px/100% "微软雅黑";
     color: #566F89;
     background: #000;
+    }
 ```
 
 径向渐变：
