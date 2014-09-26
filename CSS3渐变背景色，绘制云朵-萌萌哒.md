@@ -90,11 +90,11 @@ x-offset y-offset 设置为0的时候，阴影围绕物象形成。<br/>
 }
 ```
 -webkit-gradient(radial, inner_center, inner_radius, outer_center, outer_radius, / stop...)
-对应的值：
-inner_center	内部中心点，径向渐变起始圆环
-inner_radius	内部半径，径向渐变起始圆
-outer_center	外部渐变结束圆的中心点
-outer_radius	外部渐变结束圆的半径
+对应的值：<br/>
+inner_center	内部中心点，径向渐变起始圆环<br/>
+inner_radius	内部半径，径向渐变起始圆<br/>
+outer_center	外部渐变结束圆的中心点<br/>
+outer_radius	外部渐变结束圆的半径<br/>
 
 
 
