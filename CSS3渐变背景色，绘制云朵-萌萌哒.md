@@ -81,22 +81,30 @@ x-offset y-offset 设置为0的时候，阴影围绕物象形成。<br/>
 <div class="boxshadow">
 </div>
 ```
-.boxshadow{
-    width:100px;
-	height:100px;
-    box-shadow:4px 2px 6px #f00, -4px -2px 6px #000, 0px 0px 12px 5px #33CC00 inset
-   }
+
 ```css
 .boxshadow{
     width:100px;
-	height:100px;
+    height:100px;
     box-shadow:4px 2px 6px #f00, /*第一个阴影*/
-    -4px -2px 6px #000,/*第二个阴影*/
+    -4px -2px 6px #000, /*第二个阴影*/
     0px 0px 12px 5px #33CC00 inset/*第三个阴影*/
    }
 ```
 
+当然css3也支持文字阴影，如下演示
+```html
+<div class="demo">IMOOC</div>
+```
 
+```css
+.demo {
+    width: 340px;
+    padding: 30px;
+    font: bold 55px/100% "微软雅黑";
+    color: #566F89;
+    background: #000;
+```
 
 径向渐变：
 ```css
