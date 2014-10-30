@@ -6,8 +6,10 @@
 
 ```css
 p{
+
 line-height:30px;
 border: 1px dashed #cccccc;
+
 }
 ```
 
