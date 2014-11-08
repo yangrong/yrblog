@@ -81,7 +81,7 @@ console.log(num);//NaN
 var num=0;
 num++;
 console.log(num);//1
-
+```
 
 ###### 转换为布尔型
 
