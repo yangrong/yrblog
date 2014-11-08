@@ -48,14 +48,14 @@ a {
 
 
 
-transition有下面些具体属性：
-transition-property :* //指定过渡的性质，比如transition-property:backgrond 就是指backgound参与这个过渡
-transition-duration:*//指定这个过渡的持续时间
-transition-delay:* //延迟过渡时间
-transition-timing-function:*//指定过渡类型，有ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier
+transition有下面些具体属性：<br>
+transition-property :* //指定过渡的性质，比如transition-property:backgrond 就是指backgound参与这个过渡<br>
+transition-duration:*//指定这个过渡的持续时间<br>
+transition-delay:* //延迟过渡时间<br>
+transition-timing-function:*//指定过渡类型，有ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier<br>
 
 
-我们上面的例子，hover效果只有一个属性，在下面的例子中，
+我们上面的例子，hover效果只有一个属性，在下面的例子中，<br>
 第一个属性值transition-property如果不定义的话，所有的效果都会做过渡，如果指定，只有指定的属性有过渡动画。比如下面的例子就只有background-color有过渡的动画
 ```css
 .trans {
