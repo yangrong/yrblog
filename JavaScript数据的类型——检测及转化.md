@@ -92,6 +92,14 @@ console.log(num);//1
 !!'0';     // true
 ```
 
+布尔类型，关键字：
+null <br>
+"" <br>
+undefined <br>
+false <br>
+0 <br>
+ NaN <br>
+除去以上六种情况，其他任何时候都是返回的是 true。
 
 
 
