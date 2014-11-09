@@ -92,7 +92,7 @@ console.log(num);//1
 !!'0';     // true
 ```
 
-布尔类型，关键字：
+布尔类型，关键字：<br>
 null <br>
 "" <br>
 undefined <br>
