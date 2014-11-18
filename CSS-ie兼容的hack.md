@@ -24,12 +24,12 @@
 ```
 
 ```html
-<!--[if IE 7 ]><html class="ie7"><![endif]--><br>
+<!--[if IE 7 ]><html class="ie7"><![endif]-->
 ```
 
 ```html
 <!--ie8-->
-<!--[if IE 8 ]><html class="ie8"><![endif]--><br>
+<!--[if IE 8 ]><html class="ie8"><![endif]-->
 ```
 ```html
 <!--ie9-->
