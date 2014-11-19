@@ -35,3 +35,23 @@ vertical-align: middle;
 }
 ```
 
+
+
+#### CSS3的水平,垂直居中
+
+
+
+```html
+<!--原来的垂直居中方式-->
+<div style="width:300px; height: 300px; background-color: #ccc;
+  line-height: 300px; text-align: center;">
+    <input type="button" value="原有居中方式">
+</div>
+
+
+<!-- css3 弹性盒子 -->
+<div style="width:300px; height: 300px; background-color: #aaa;
+ display:-webkit-box;-webkit-box-pack: center; -webkit-box-align:center">
+    <input type="button" value="css3的居中方式">
+</div>
+```
