@@ -59,7 +59,7 @@ text-decoration: none;
 
 因为ie6 ie7上面的 inline-block属性不能正确解析。
 
-IE6/IE7下对display:inline-block的支持性不好。
+IE6/IE7下对display:inline-block的支持性不好。<br>
 1、inline元素的display属性设置为inline-block时，所有的浏览器都支持;<br>
 2、block元素的display属性设置为inline-block时，IE6/IE7浏览器是不支持的；<br>
 
