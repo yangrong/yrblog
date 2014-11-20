@@ -57,7 +57,7 @@ text-decoration: none;
 但是ie6，ie7是这样显示的：
 ![](http://p2.qhimg.com/t019b0d04dbacb63ecd.png)
 
-因为ie6 ie7上面的 inline-block属性不能正确解析。
+
 
 IE6/IE7下对display:inline-block的支持性不好。<br>
 1、inline元素的display属性设置为inline-block时，所有的浏览器都支持;<br>
@@ -72,5 +72,4 @@ IE6/IE7下对display:inline-block的支持性不好。<br>
 我们直接在li的css定义里面补充,如下属性，就可以正常显示了 
 ```html
 ul li{ _zoom:1;*display:inline;}
-
 ```
