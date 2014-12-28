@@ -83,6 +83,11 @@ W('.pay-monthly').on('click', function(e) {
 ```js
 W('.pay-monthly').on('click', function(e) {
   e.preventDefault();
+  /*
+  点击之后立即触发的window.open打开的新标签不会被任何浏览器屏蔽，包括ie6
+  */
+  var newWindow  = window.open('about:blank');
+
   var _this = W(this),
     packageId = _this.getAttr('data-packageid'),
     type = _this.getAttr('data-type'),
@@ -94,17 +99,20 @@ W('.pay-monthly').on('click', function(e) {
   QW.Ajax.get(requestUrl, function(responseText) {
     var state = responseText.evalExp().errno;
     if (state == 1001) {
-    //返回值，清空定时器。
-             
+
+    //不需要的情况下关闭窗口就是，就好像什么都没有发生过一样。
+
+	  newWindow.close();
       W('#tophead .btn-login-pop').click();
     }
+
     if (state == 1002) {
        
-      W('#popnotice-wrap .continue').attr('href', payUrl);
+       newWindow.close();
     }
     if (state == 1000) {
-    //传值给定时器，定时器获取信息，触发click事件
-       
+    //给打开的窗口赋值url
+       newWindow.location.href = payUrl;
     }
   });
 
