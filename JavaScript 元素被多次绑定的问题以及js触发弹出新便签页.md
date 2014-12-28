@@ -93,8 +93,6 @@ W('.pay-monthly').on('click', function(e) {
     type = _this.getAttr('data-type'),
     payUrl = '/packag/scribe?packageid=' + packageId + '&type=' + type,
     requestUrl = '/packag/bpackage?packageid=' + packageId + '&type=' + type;
-  var elLink = W('.open-blank'),
-   
 
   QW.Ajax.get(requestUrl, function(responseText) {
     var state = responseText.evalExp().errno;
