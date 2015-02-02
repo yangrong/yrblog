@@ -545,5 +545,4 @@ thing.logThings(["apples", "oranges", "strawberries", "bananas"]);
 
 
 
-转载（较原文有修改）
-[原文链接]: http://www.cnblogs.com/Wayou/p/all-this.html#home
+转载，较原文有修改[原文链接](http://www.cnblogs.com/Wayou/p/all-this.html#home)。
