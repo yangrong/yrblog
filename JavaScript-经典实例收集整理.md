@@ -1,3 +1,5 @@
+### JavaScript经典实例收集整理
+
 #### 跨浏览器事件
 
 ##### 跨浏览器添加事件
@@ -83,7 +85,7 @@ function getTarget(ev){
         }
 
 ```
-##### js 对象冒充
+#### js 对象冒充
 
 ```js
 
@@ -101,7 +103,7 @@ function getTarget(ev){
 
 ```
 
-##### js 异步加载和同步加载
+#### js 异步加载和同步加载
 
 异步加载也叫非阻塞模式加载，浏览器在下载js的同时，同时还会执行后续的页面处理。
 在script标签内，用js创建一个script元素并插入到document中，这种就是异步加载js文件了：
@@ -119,7 +121,7 @@ function getTarget(ev){
 ```
 
 
-##### 同步加载
+#### 同步加载
 
 　　平常默认用的都是同步加载。如：
 ```html
@@ -130,7 +132,7 @@ function getTarget(ev){
 
 　　同步加载流程是瀑布模型，异步加载流程是并发模型。
 
-##### js获取屏幕坐标
+#### js获取屏幕坐标
 ```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -169,7 +171,7 @@ X:<input id="xxx" type="text" /> Y:<input id="yyy" type="text" />
 3.document.documentElement.scrollTop 指的是滚动条的垂直坐标<br/>
 4.document.documentElement.clientHeight 指的是浏览器可见区域高度<br/>
 
-##### DTD已声明的情况下：
+#### DTD已声明的情况下：
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
@@ -238,7 +240,7 @@ offsetX:IE特有,鼠标相比较于触发事件的元素的位置,以元素盒�
 
 图片描述
 
-##### js拖拽效果
+#### js拖拽效果
 
 ```html
 <!doctype html>
@@ -284,7 +286,7 @@ offsetX:IE特有,鼠标相比较于触发事件的元素的位置,以元素盒�
 ```
 offsetTop 返回的是数字，而 style.top 返回的是字符串，除了数字外还带有单位：px。
 
-##### js获取图片原始大小尺寸
+#### js获取图片原始大小尺寸
 ```js
 var img = $("#img_id"); // Get my img elem
 var pic_real_width, pic_real_height;
@@ -296,7 +298,7 @@ $("&lt;img/&gt;") // Make in memory copy of image to avoid css issues
     });
 ```
 
-##### js循环遍历数组
+#### js循环遍历数组
 
 ```js
        //循环遍历数组  
@@ -308,7 +310,7 @@ $("&lt;img/&gt;") // Make in memory copy of image to avoid css issues
        alert(animalString);  //输出数组里的每个项
 ```
 
-##### 遍历二维数组
+#### 遍历二维数组
 
 ```js
 
@@ -323,7 +325,7 @@ $("&lt;img/&gt;") // Make in memory copy of image to avoid css issues
 ```
 
 
-##### 阻止表单重复提交
+#### 阻止表单重复提交
 
 有两种方法可以解决：一是提交之后，立刻禁用点击按钮；第二种就是提交之后取消后续的表单提交操作。
 ```js
@@ -340,7 +342,7 @@ flag = true;//表示提交过一次了
 ```
 
 
-字符串部分
+#### 字符串部分
 
 ##### 在字符串中查找子字符串
 
@@ -389,7 +391,7 @@ var degrees = rad*(180/Math.PI);
 ```
 
 
-数组部分
+#### 数组部分
 
 ##### 创建多维数组
 
