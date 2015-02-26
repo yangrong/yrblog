@@ -20,9 +20,18 @@ get和post的区别
 ![](http://p1.qhimg.com/t0127064ba70b48a2b6.jpg)
 
 
+
+    GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值，
+    也就是说Get是通过地址栏来传值，而Post是通过提交表单来传值。
+
+然而，在以下情况中，请使用 POST 请求：<br/>
+无法使用缓存文件（更新服务器上的文件或数据库）<br/>
+向服务器发送大量数据（POST 没有数据量限制）<br/>
+发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠<br/>
+
 ## get
 
-* get方法是允许跨域的,因为url访问是无限制的,JSONP跨域GET请求是一个常用的解决方案，但是这里的get的跨域方式其实与ajax XmlHttpRequest协议无关了
+* get方法是允许跨域的,因为url访问是无限制的,JSONP跨域GET请求是一个常用的解决方案，但是这里的get的跨域方式其实与ajax XmlHttpRequest协议无关了,：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符
 
 * get参数可见，而post不可见
 
@@ -32,7 +41,7 @@ get和post的区别
 
 * post参数不可见，是放在对象里面传给后端的。
 
-* 如图 控制台上打出来的 psot 方法
+* 如图 控制台上打出来的 get 方法
 
 ![](http://p2.qhimg.com/t016485ab8ebfd286b4.png)
 
