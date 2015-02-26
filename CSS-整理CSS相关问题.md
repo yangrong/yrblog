@@ -65,11 +65,40 @@ div{
 
 CSS3新增伪类举例：
 
+##### CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？
 
-p:first-of-type 选择属于其父元素的首个 <p> 元素的每个 <p> 元素。<br/>
-p:last-of-type  选择属于其父元素的最后 <p> 元素的每个 <p> 元素。<br/>
-p:only-of-type  选择属于其父元素唯一的 <p> 元素的每个 <p> 元素。<br/>
-p:only-child    选择属于其父元素的唯一子元素的每个 <p> 元素。<br/>
-p:nth-child(2)  选择属于其父元素的第二个子元素的每个 <p> 元素。<br/>
+   *   1.id选择器（ # myid）<br/>
+        2.类选择器（.myclassname）<br/>
+        3.标签选择器（div, h1, p）<br/>
+        4.相邻选择器（h1 + p）<br/>
+        5.子选择器（ul < li）<br/>
+        6.后代选择器（li a）<br/>
+        7.通配符选择器（ * ）<br/>
+        8.属性选择器（a[rel = "external"]）<br/>
+        9.伪类选择器（a: hover, li: nth - child）<br/>
+
+    *   可继承的样式： font-size font-family color, UL LI DL DD DT;<br/>
+
+    *   不可继承的样式：border padding margin width height ;<br/>
+
+    *   优先级就近原则，同权重情况下样式定义最近者为准;<br/>
+
+    *   载入样式以最后载入的定位为准;<br/>
+
+优先级为:
+
+
+   !important >  id > class > tag  <br/>
+
+   important 比 内联优先级高 <br/>
+
+CSS3新增伪类举例：
+
+
+p:first-of-type 选择属于其父元素的首个 p 元素的每个 p 元素。<br/>
+p:last-of-type  选择属于其父元素的最后 p 元素的每个 p 元素。<br/>
+p:only-of-type  选择属于其父元素唯一的 p 元素的每个 p 元素。<br/>
+p:only-child    选择属于其父元素的唯一子元素的每个 p 元素。<br/>
+p:nth-child(2)  选择属于其父元素的第二个子元素的每个 p 元素。<br/>
 :enabled  :disabled 控制表单控件的禁用状态。<br/>
 :checked        单选框或复选框被选中。<br/>
