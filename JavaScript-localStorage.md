@@ -63,6 +63,8 @@ var strStoreDate = window.localStorage? localStorage.getItem("menuTitle"): Cooki
 
 ###### 其他本地存储的tip:
 1. sessionStorage是一个跟浏览器生命周期相同的本地存储,在页面刷新后保持之前输入的数据的场景下特别有效.
+sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。
+而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
 2. 可以用localStorage.clear()方法彻底清除localStorage.
 3. localStorage对于每个域都有5兆的存储空间,而且对于存储数据条数也有不同的限制.
 4. localStorage只能存储文本数据.如果你想存储图像,那也不是不可能的,可以用canvas将图片转换成dataurl的形式,然后存储起来.
