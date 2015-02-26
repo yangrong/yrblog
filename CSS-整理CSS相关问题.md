@@ -102,3 +102,9 @@ p:only-child    选择属于其父元素的唯一子元素的每个 p 元素。<
 p:nth-child(2)  选择属于其父元素的第二个子元素的每个 p 元素。<br/>
 :enabled  :disabled 控制表单控件的禁用状态。<br/>
 :checked        单选框或复选框被选中。<br/>
+
+兼容ie6的清楚浮动
+```css
+.clearfix:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix{display: inline-block;} /* for IE/Mac */
+```
