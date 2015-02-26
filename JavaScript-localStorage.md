@@ -69,3 +69,4 @@ sessionStorage用于本地存储一个会话（session）中的数据，这些�
 3. localStorage对于每个域都有5兆的存储空间,而且对于存储数据条数也有不同的限制.
 4. localStorage只能存储文本数据.如果你想存储图像,那也不是不可能的,可以用canvas将图片转换成dataurl的形式,然后存储起来.
 5. 请关注localStorage的存储性能,在某些浏览器中存取数据非常慢,例如opera中.
+6.Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。
