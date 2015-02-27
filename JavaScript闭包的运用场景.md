@@ -50,8 +50,159 @@
 3. 私有成员的存在
 
 
+#### 全局变量的累加
+
+```js
+var a = 1;
+function abc(){
+        a++;
+        alert(a);
+}
+abc();              //2
+abc();            //3
+```
+
+#### 局部变量
+
+```js
+
+function abc(){
+        var a = 1;
+        a++;
+        alert(a);
+}
+abc();                       //2
+abc();                    //2
+```
 
 
+那么怎么才能做到变量a既是局部变量又可以累加呢？
+
+#### 局部变量的累加
+
+```js
+function outer(){
+        var x=10;
+        return function(){             //函数嵌套函数
+                x++;
+                alert(x);
+        }
+}
+var y = outer();      //外部函数赋给变量y;
+y();                 //y函数调用一次，结果为11，相当于outer()()；
+y();                //y函数调用第二次，结果为12，实现了累加
+```
+
+
+函数声明与函数表达式
+
+在js中我们可以通过关键字function来声明一个函数：
+
+```js
+function abc(){
+        alert(123);
+}
+abc();
+```
+我们也可以通过一个"()"来将这个声明变成一个表达式：
+
+```js
+(function (){
+        alert(123);
+})();                   //然后通过()直接调用前面的表达式即可，因此函数可以不必写名字；
+```
+
+#### 模块化代码，减少全局变量的污染
+
+```js
+var abc = (function(){      //abc为外部匿名函数的返回值
+        var a = 1;
+        return function(){
+                a++;
+                alert(a);
+        }
+})();
+abc();    //2 ；调用一次abc函数，其实是调用里面内部函数的返回值    
+abc();    //3
+```
+
+
+#### 私有成员的存在
+
+```js
+var aaa = (function(){
+        var a = 1;
+        function bbb(){
+                a++;
+                alert(a);
+        }
+        function ccc(){
+                a++;
+                alert(a);
+        }
+        return {
+                b:bbb,             //json结构
+                c:ccc
+        }
+})();
+aaa.b();     //2
+aaa.c()      //3
+```
+
+
+#### 使用匿名函数实现累加
+
+//使用匿名函数实现局部变量驻留内存中，从而实现累加
+
+```js
+
+ function box(){
+     var age = 100;
+     return function(){          //匿名函数
+          age++;
+          return age;
+     };
+
+ } 
+var b = box();
+alert(b());
+alert(b());    //即alert(box()())；
+alert(b());
+alert(b);            //     function () {
+                        //   age++;
+                       // return age;
+                      //       }
+
+b = null；  //解除引用，等待垃圾回收
+```
+
+
+
+过度使用闭包会导致性能的下降。函数里放匿名函数，则产生了闭包
+
+
+#### 内存泄露问题
+
+由于IE的js对象和DOM对象使用不同的垃圾收集方法，因此闭包在IE中会导致内存泄露问题，也就是无法销毁驻留在内存中的元素
+```js
+function closure(){
+    var oDiv = document.getElementById('oDiv');//oDiv用完之后一直驻留在内存中
+    oDiv.onclick = function () {
+        alert('oDiv.innerHTML');//这里用oDiv导致内存泄露
+    };
+}
+closure();
+//最后应将oDiv解除引用来避免内存泄露
+function closure(){
+    var oDiv = document.getElementById('oDiv');
+    var test = oDiv.innerHTML;
+    oDiv.onclick = function () {
+        alert(test);
+    };
+    oDiv = null;
+}
+
+```
 最近在练习原生的js，下面代码的所有的li都绑定同一个事件
 
 ```html
@@ -80,6 +231,7 @@
  for (var i = 0; i < menuLi.length; i++) {
 		
 	menuLi[i].onclick = (function(i) {
+		//第一次点击的时候，for循环已经执行到最后一步了。
 		console.log(menuContent[i]);
 		console.log(menuContent[i].className);
 
@@ -122,38 +274,39 @@
 }
 ```
 
-这个函数执行，只是return一个函数是吧，return的函数体，会在onclick时间的时候触发。
+这个函数执行，只是return一个函数，return的函数体，会在onclick时间的时候触发。
 
 下面我们来看一下，一个最常见的闭包的运用场景
 ```js
 
-var testbibao ='闭包可以访问外面的变量，函数';
-	(function(){
-    var name = '我在闭包里面，闭包外面的函数没有办法取到我的值';
-    var age = '34';
-    var status = 'single';
-    function createMember(){
-        console.log('闭包')
-    }
-    function getMemberDetails(){
-        // [...]
-        console.log(testbibao);
-    }
-    createMember();
-    getMemberDetails();//输出：闭包可以访问外面的变量，函数
+var testbibao = '闭包可以访问外面的变量，函数';
+(function() {
+	var name = '我在闭包里面，闭包外面的函数没有办法取到我的值';
+	var age = '34';
+	var status = 'single';
+
+	function createMember() {
+		console.log('闭包')
+	}
+
+	function getMemberDetails() {
+		// [...]
+		console.log(testbibao);
+	}
+	createMember();
+	getMemberDetails(); //输出：闭包可以访问外面的变量，函数
 })();
 
+	/*函数内部的局部变量函数外部不能访问*/
+function test() {
+		console.log(name);//输出空白
+	}
 
-function test(){
-	console.log(name);
-}
-/*这里为了测试，建议不要用相同命名，
-这里：闭包里面有一个同名函数，但是互相不影响的*/
-function getMemberDetails(){
+function getMemberDetails() {
 	console.log('闭包里面有一个同名函数，但是互相不影响的，素不素啊！')
 }
 
-test();//这里输出空值，因为闭包里面的变量外面访问不到
+test(); //这里输出空值，因为闭包里面的变量外面访问不到
 getMemberDetails();
 
 ```
