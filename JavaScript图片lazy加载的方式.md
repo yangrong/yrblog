@@ -1,3 +1,4 @@
+```js
 // @description 准备为图片预加载使用的插件
 // 使用的图片容器css类名为lazy-load-wrap
 // 图片真实地址为data-lazy-src
@@ -116,3 +117,4 @@ $(function () {
         }, 500);
     });
 });
+```
